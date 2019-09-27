@@ -69,11 +69,8 @@ class SlackServiceProvider extends ServiceProvider {
       case 4:
         return new SlackServiceProviderLaravel4($app);
 
-      case 5:
-        return new SlackServiceProviderLaravel5($app);
-
       default:
-        throw new RuntimeException('Your version of Laravel is not supported');
+        return new SlackServiceProviderLaravel5($app);
     }
   }
 
